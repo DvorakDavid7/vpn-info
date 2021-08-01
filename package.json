@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build-ts": "tsc",
-    "build-scss": "sass ./public/src/scss/style.scss ./public/dist/style.css" 
+    "build-scss": "sass ./public/src/scss/style.scss ./public/dist/style.css",
+    "watch-ts": "tsc --watch",
+    "watch-scss": "sass ./public/src/scss/style.scss ./public/dist/style.css --watch",
+    "run-build": "npm run build-ts && npm run build-scss"
+    
   },
   "repository": {
     "type": "git",
