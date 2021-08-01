@@ -1,5 +1,65 @@
-* {
-  background-color: black;
+/* GLOBAL VARIABLES*/
+/* GLOBAL CLASSES */
+/* HEADER COMPONENT */
+#section-header {
+  background-color: #292a40;
+  position: relative;
+  z-index: -1;
+}
+#section-header .header-text-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+#section-header .header-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 100%;
+  background-color: #dfde31;
+  width: 21rem;
+  height: 21rem;
+  color: black;
+}
+#section-header .header-circle:after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  border: 20px solid red;
+  width: 2rem;
+  height: 15rem;
+}
+#section-header #header-circle1:after {
+  left: 100%;
+  top: 0%;
+  transform: rotate(75deg);
+}
+#section-header #header-circle2:after {
+  display: none;
+}
+#section-header #header-circle3:after {
+  top: 0%;
+  right: 100%;
+  transform: rotate(-75deg);
+}
+@media (max-width: 1400px) {
+  #section-header .header-circle {
+    width: 13rem;
+    height: 13rem;
+  }
+  #section-header .header-circle:after {
+    content: "";
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  #section-header .header-circle {
+    width: 8rem;
+    height: 8rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

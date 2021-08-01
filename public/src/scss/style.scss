@@ -1,3 +1,115 @@
-* {
-    background-color: black;
+/* GLOBAL VARIABLES*/
+
+// background variables
+$background1: #3f4161;
+$background2: white;
+$background3: #dfde31;
+$background-jumbo: #292a40;
+
+
+// header circle
+$header-circle-diameter: 21rem;
+$header-circle-connector-color: red;
+$header-circle-connector-thicknes: 20px;
+
+$header-circle-connector-width: 2rem;
+$header-circle-connector-height: 15rem;
+
+
+// text
+$font-color-white: white;
+$font-color-black: black;
+
+
+// breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+
+/* GLOBAL CLASSES */
+
+
+
+/* HEADER COMPONENT */
+
+#section-header {
+    // common
+    background-color: $background-jumbo;
+    position: relative;
+    z-index: -1;
+
+    .header-text-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: $font-color-white;
+    }
+    
+    .header-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-radius: 100%;
+        background-color: $background3;
+        width: $header-circle-diameter;
+        height: $header-circle-diameter;
+        color: $font-color-black;
+    }
+    
+    // line between circles styling
+    .header-circle:after {
+        position: absolute;
+        content: "";
+        z-index: -1;
+        border: $header-circle-connector-thicknes solid $header-circle-connector-color;
+        width: $header-circle-connector-width;   
+        height: $header-circle-connector-height;
+    }
+
+    // line between circles positioning
+    #header-circle1:after {
+        left: 100%;
+        top: 0%;
+        transform: rotate(75deg);
+    }
+
+    #header-circle2:after {
+        display: none;
+    }
+
+    #header-circle3:after {
+        top: 0%;
+        right: 100%;
+        transform: rotate(-75deg);
+    }
+
+    // responsivity
+    @media(max-width: $breakpoint-xxl) {
+        $circle-size-modifier: 8rem;
+
+        .header-circle {
+            width: $header-circle-diameter - $circle-size-modifier;
+            height: $header-circle-diameter - $circle-size-modifier;
+        }
+
+        .header-circle:after {
+            content: "";
+            display: none;
+        }
+    }
+
+    @media(max-width: $breakpoint-lg) {
+        $circle-size-modifier: 13rem;
+
+        .header-circle {
+            width: $header-circle-diameter - $circle-size-modifier;
+            height: $header-circle-diameter - $circle-size-modifier;
+        }
+    }
 }
