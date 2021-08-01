@@ -1,0 +1,26 @@
+{
+  "name": "vpn-info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-ts": "tsc",
+    "build-scss": "sass ./public/src/scss/style.scss ./public/dist/style.css" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DvorakDavid7/vpn-info.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DvorakDavid7/vpn-info/issues"
+  },
+  "homepage": "https://github.com/DvorakDavid7/vpn-info#readme",
+  "dependencies": {
+    "sass": "^1.37.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
+}
